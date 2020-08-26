@@ -4,11 +4,7 @@
     "path": "/"
   },
   {
-    "name": "Test",
-    "path": "/using-typescript"
-  },
-  {
     "name": "Blog",
-    "path": "/blog"
+    "path": "https://blog.armanimichael.com"
   }
 ]

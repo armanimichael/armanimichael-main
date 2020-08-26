@@ -42,14 +42,14 @@ const Footer: React.FC<Props> = ({ logoSrc, customTitle, logoBackground }) => {
           <h3>
             <IoMdInformationCircleOutline />
           </h3>
-          <a href="/sitemap.xml">Sitemap</a>
-          <Link to="/">Privacy Policy</Link>
+          <Link to="/privacy">Sitemap</Link>
+          <Link to="/privacy">Privacy Policy</Link>
           <a
             href="https://armanimichael.com"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
-            Developed by Michael Armani
+            Developed by Me
           </a>
         </div>
       </FooterStyled>

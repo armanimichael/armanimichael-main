@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-const secondaryTheme: DefaultTheme = {
+const lightTheme: DefaultTheme = {
   paragraph: {
     primary: '#2d334a',
     secondary: '#2d334a',
@@ -12,8 +12,8 @@ const secondaryTheme: DefaultTheme = {
   },
 
   button: {
-    primary: '#ffd803',
-    primaryColor: '#272343',
+    primary: '#6246ea',
+    primaryColor: '#fffffe',
     secondary: '',
     secondaryColor: '',
   },
@@ -38,4 +38,4 @@ const secondaryTheme: DefaultTheme = {
   },
 };
 
-export { secondaryTheme };
+export { lightTheme };

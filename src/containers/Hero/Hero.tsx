@@ -1,7 +1,14 @@
 import React from 'react';
 
-import { HeroStyled } from './styles';
+import { HeroStyled, StyledBackground } from './styles';
 
-const Hero: React.FC = ({ children }) => <HeroStyled>{children}</HeroStyled>;
+const Hero: React.FC = ({ children }) => (
+  <HeroStyled>
+    <div className="image">
+      <StyledBackground className="hero-background" />
+    </div>
+    {children}
+  </HeroStyled>
+);
 
 export default Hero;

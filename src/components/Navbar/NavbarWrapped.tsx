@@ -12,6 +12,7 @@ import MenuButton from './MenuButton';
 interface Props {
   isHidden: boolean;
   logoImg?: string;
+  themeButton: JSX.Element;
   [index: string]: any;
 }
 
@@ -26,9 +27,17 @@ const NavbarWrapped: React.FC<Props> = props => {
   return (
     <NavbarWrappedStyled {...props}>
       <DisableBodyScroll disableScroll={isOpen && !props.isHidden} />
-      <Logo isWrapped={true} image={props.logoImg} to="/" title="Homepage" />
+      <Logo
+        isWrapped={true}
+        image={props.logoImg}
+        to="/"
+        size={40}
+        marginLeft={35}
+        title="Homepage"
+      />
       <MenuButton isClicked={isOpen} onClick={() => setOpen(!isOpen)} />
       <ContentWrapped isClicked={isOpen} isHidden={props.isHidden}>
+        {props.themeButton}
         {links}
       </ContentWrapped>
     </NavbarWrappedStyled>

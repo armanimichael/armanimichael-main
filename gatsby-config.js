@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Mike',
-    sitename: 'Gatsby Starter Mike',
-    siteUrl: 'localhost:8000',
+    title: 'Armani Michael',
+    sitename: 'Armani Michael',
+    siteUrl: 'https://armanimichael.com',
     description:
-      'Gatsby Starter with TypeScript support, js styling with styled-components and MDX posts',
+      'Software Developer based in Italy. Read more about programming and Web Development on my Blog - I mostly write about Web Development and ReactJS, but you can find other topics too.',
     author: '',
   },
   plugins: [
@@ -51,12 +51,12 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-mike',
-        short_name: 'mike-starter',
+        short_name: 'armani-michael-blog',
         start_url: '/',
-        background_color: '#232946',
-        theme_color: '#232946',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        background_color: '#0f0e17',
+        theme_color: '#a7a9be',
+        display: 'fullscreen',
+        icon: 'src/images/logo.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -154,34 +154,6 @@ module.exports = {
             };
           });
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 950,
-              quality: 100,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-            },
-          },
-        ],
       },
     },
   ],

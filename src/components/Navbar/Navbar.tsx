@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { IoMdSettings } from 'react-icons/io';
 
 import { NavbarStyled, NavbarExtended, Logo } from './styles';
 
 import { generateLinks } from '../../utils/generateLinks';
 import NavbarWrapped from './NavbarWrapped';
 
-interface ThemeButtonProps {
-  openThemesModal: React.MouseEventHandler<SVGElement>;
-}
-
-interface NavbarProps extends ThemeButtonProps {
+interface NavbarProps {
   logoSrc?: string;
-  allowTheming?: boolean;
+  isDarkMode: boolean;
+  changeTheme: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({
   logoSrc,
-  openThemesModal,
-  allowTheming,
+  isDarkMode,
+  changeTheme,
 }) => {
   const [isWrapped, setMenuSize] = useState(false);
 
@@ -61,6 +57,16 @@ const Navbar: React.FC<NavbarProps> = ({
     }
   };
 
+  const themeButton = isDarkMode ? (
+    <span role="img" aria-label="light-mode" onClick={changeTheme}>
+      ☀️
+    </span>
+  ) : (
+    <span role="img" aria-label="dark-mode" onClick={changeTheme}>
+      🌙
+    </span>
+  );
+
   return (
     <NavbarStyled>
       <div id="top" />
@@ -73,15 +79,15 @@ const Navbar: React.FC<NavbarProps> = ({
           title="Homepage"
         />
         {generateLinks()}
-        {allowTheming && <IoMdSettings onClick={openThemesModal} />}
+        {themeButton}
       </NavbarExtended>
 
       <NavbarWrapped
         isHidden={!isWrapped}
         id="navbar-wrapped"
         logoImg={logoSrc}
+        themeButton={themeButton}
       >
-        {allowTheming && <IoMdSettings onClick={openThemesModal} />}
         {generateLinks()}
       </NavbarWrapped>
     </NavbarStyled>

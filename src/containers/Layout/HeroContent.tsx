@@ -3,26 +3,22 @@ import React from 'react';
 import { Button } from '../../components';
 import { Hero, ButtonGroup } from '../';
 
-const doSomething = () => {
-  alert('!');
-};
-
 const HeroContent: React.FC = () => (
   <Hero>
-    <h1>Look, I&apos;m a Website!</h1>
-    <h2>Feelin&apos; good, mate 👍.</h2>
+    <h1>Hi, I&apos;m Michael.</h1>
+    <h3>Software Developer based in Italy</h3>
     <ButtonGroup>
       <Button
-        onClick={doSomething}
+        anchorTo="https://blog.armanimichael.com"
         styles={{ color: 'black', background: '#39ff14' }}
       >
-        Check this out!
+        Check my blog out!
       </Button>
       <Button
-        anchorTo="/using-typescript/"
+        anchorTo="/#portfolio"
         styles={{ color: 'black', background: '#fce205' }}
       >
-        About us
+        Portfolio
       </Button>
     </ButtonGroup>
   </Hero>

@@ -22,6 +22,8 @@ interface DisableBodyScrollProps {
 interface LogoProps {
   isWrapped: boolean;
   image?: string;
+  size?: number;
+  marginLeft?: number;
 }
 
 // * Styles
@@ -44,6 +46,7 @@ const Navbar = styled.nav`
   top: 0;
   left: 0;
   background: ${props => props.theme.backgrounds.primary};
+  overflow-y: hidden;
 
   & a {
     color: ${props => props.theme.paragraph.primary};
@@ -60,6 +63,15 @@ const NavbarExtended = styled(Navbar)<NavbarProps>`
   justify-content: flex-start;
   align-items: center;
   z-index: ${props => (props.isHidden ? 100 : 200)};
+
+  & span {
+    font-size: 22px;
+    cursor: pointer;
+
+    &::selection {
+      background: none;
+    }
+  }
 
   & svg {
     font-size: 28px;
@@ -119,7 +131,6 @@ const NavbarWrappedStyled = styled(Navbar)<NavbarProps>`
   box-sizing: border-box;
   justify-content: flex-end;
   align-items: center;
-
   z-index: ${props => (props.isHidden ? 100 : 200)};
 
   /* Overloads Overflow checks if under max-width */
@@ -170,8 +181,6 @@ const Bottom = styled(Line)<ButtonProps>`
 
 const ContentWrapped = styled.div<ContentWrappedProps>`
   position: fixed;
-  /* 108px = 36px button * 3 */
-  /* max-width: calc(100vw - 108px); */
   height: 100vh;
   background: ${props => props.theme.backgrounds.primary};
   border-right: 2px solid rgba(0, 0, 0, 0.6);
@@ -194,7 +203,8 @@ const ContentWrapped = styled.div<ContentWrappedProps>`
     min-height: 28px;
   }
 
-  & a {
+  & a,
+  span {
     font-size: 24px;
     margin: 1em 2em 0 2em;
     word-break: break-all;
@@ -206,6 +216,15 @@ const ContentWrapped = styled.div<ContentWrappedProps>`
     }
   }
 
+  & span {
+    text-align: center;
+    cursor: pointer;
+
+    &::selection {
+      background: none;
+    }
+  }
+
   /* Overloads Opacity if under max-width */
   @media screen and (max-width: 800px) {
     opacity: 1;
@@ -213,8 +232,11 @@ const ContentWrapped = styled.div<ContentWrappedProps>`
 `;
 
 const Logo = styled(Link)<LogoProps>`
-  min-width: ${props => (props.isWrapped ? '180px' : '300px')};
-  height: 80%;
+  width: ${props => props.size || 65}px;
+  height: ${props => props.size || 65}px;
+  box-sizing: border-box;
+  margin: ${props =>
+    props.marginLeft ? `0 0 0 ${props.marginLeft}px` : '0 20px 0 40px'};
   position: ${props => (props.isWrapped ? 'absolute' : 'relative')};
   left: 0;
   background-image: url(${props => props.image});

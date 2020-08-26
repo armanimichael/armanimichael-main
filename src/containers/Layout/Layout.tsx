@@ -7,10 +7,11 @@ import HeroContent from './HeroContent';
 
 import '../../themes/index.css';
 import GlobalStyle from '../../themes/global-style';
+import '../../themes/index.css';
 
-import { Navbar, Footer, ThemeModal, BackToTop, SEO } from '../../components';
+import { Navbar, Footer, BackToTop, SEO } from '../../components';
 
-import logoImg from '../../images/gatsby.png';
+import logoImg from '../../images/logo.png';
 
 import themes from '../../themes/themes';
 
@@ -21,38 +22,30 @@ interface Props {
   allowPadding?: boolean;
 }
 
-const defaultProps = {
-  showHero: false,
-  mainFlex: 4,
-};
-
-const isWebsiteThemed = (): boolean => Object.keys(themes).length > 1;
-
 const Layout: React.FC<Props> = ({
   children,
-  showHero = defaultProps.showHero,
+  showHero = false,
   noScriptMsg = 'JavaScript is disabled, theme changing and other functionalities may not work.',
   SEOComponent,
   allowPadding = true,
 }) => {
-  const [showThemeModal, setThemeModalState] = useState<boolean>(false);
-
-  const [currentTheme, setTheme] = useState<string>('main');
+  const [isDarkMode, setIsDarkTheme] = useState<boolean>(true);
 
   useEffect(() => {
-    setTheme(window.localStorage.getItem('theme') || 'main');
+    const loadedTheme = window.localStorage.getItem('darkmode') || 'true';
+    loadedTheme === 'true' ? setIsDarkTheme(true) : setIsDarkTheme(false);
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem('theme', currentTheme);
-  }, [currentTheme]);
+    window.localStorage.setItem('darkmode', isDarkMode.toString());
+  }, [isDarkMode]);
 
-  const setNewTheme = (newTheme: string) => {
-    setTheme(newTheme);
+  const switchTheme = () => {
+    setIsDarkTheme(!isDarkMode);
   };
 
   return (
-    <ThemeProvider theme={themes[currentTheme]}>
+    <ThemeProvider theme={isDarkMode ? themes.dark : themes.light}>
       {SEOComponent || <SEO />}
       <GlobalStyle />
       <BackToTop />
@@ -62,26 +55,18 @@ const Layout: React.FC<Props> = ({
         buttonText="Accept"
         declineButtonText="Decline"
         cookieName="gatsby-gdpr-google-analytics"
-        cookieSecurity
+        sameSite="strict"
       >
         This site uses cookies... {` `}
         <Link to="/privacy/">Read more about privacy.</Link>
       </CookieConsent>
       <header>
-        {showThemeModal && (
-          <ThemeModal
-            changeTheme={(newTheme: string): void => {
-              setNewTheme(newTheme);
-            }}
-            setVisibility={(): void => {
-              setThemeModalState(false);
-            }}
-          />
-        )}
         <Navbar
           logoSrc={logoImg}
-          openThemesModal={() => setThemeModalState(true)}
-          allowTheming={isWebsiteThemed()}
+          isDarkMode={isDarkMode}
+          changeTheme={(): void => {
+            switchTheme();
+          }}
         />
         <noscript>
           <p>{noScriptMsg}</p>
@@ -91,7 +76,7 @@ const Layout: React.FC<Props> = ({
       <main className={allowPadding ? 'general-content' : 'home-content'}>
         {children}
       </main>
-      <Footer logoSrc={logoImg} logoBackground="white"></Footer>
+      <Footer logoSrc={logoImg}></Footer>
     </ThemeProvider>
   );
 };
