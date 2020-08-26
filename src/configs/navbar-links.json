@@ -1,0 +1,14 @@
+[
+  {
+    "name": "home",
+    "path": "/"
+  },
+  {
+    "name": "Test",
+    "path": "/using-typescript"
+  },
+  {
+    "name": "Blog",
+    "path": "/blog"
+  }
+]
