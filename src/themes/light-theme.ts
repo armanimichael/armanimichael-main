@@ -29,9 +29,7 @@ const lightTheme: DefaultTheme = {
     heading: '#272343',
   },
 
-  linearGradients: {
-    primary: 'linear-gradient(to right, #8e9eab, #eef2f3)',
-  },
+  heroHue: '90deg',
 
   alerts: {
     danger: '#F56565',

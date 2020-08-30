@@ -29,10 +29,7 @@ const darkTheme: DefaultTheme = {
     heading: '#ff8906',
   },
 
-  linearGradients: {
-    primary:
-      'linear-gradient(to left bottom, #b8c1ec, #9098bf, #6a7095, #454b6c, #232946);',
-  },
+  heroHue: '200deg',
 
   alerts: {
     danger: '#F56565',

@@ -30,9 +30,7 @@ declare module 'styled-components' {
       heading: string;
     };
 
-    linearGradients: {
-      primary: string;
-    };
+    heroHue: string;
 
     alerts: {
       danger: string;

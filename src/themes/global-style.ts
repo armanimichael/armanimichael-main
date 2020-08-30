@@ -189,6 +189,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .hero-background {
+    filter: hue-rotate(${props => props.theme.heroHue});
+  }
+
   @media all and (max-width: 800px) {
     h1 {
       font-size: 40px;

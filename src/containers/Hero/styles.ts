@@ -8,7 +8,6 @@ const StyledBackground = styled(HeroBackground)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: hue-rotate(200deg);
 
   @media all and (max-width: 800px) {
     min-height: calc(100vh - 50px);
@@ -27,7 +26,6 @@ const HeroStyled = styled.div`
   box-sizing: border-box;
   padding: 10px;
   margin-bottom: 80px;
-  /* background-image: ${props => props.theme.linearGradients.primary}; */
 
   & h1 {
     font-size: 64px;
@@ -47,7 +45,6 @@ const HeroStyled = styled.div`
     width: 100%;
     min-height: 100%;
     z-index: 1;
-    
 
     &:after {
       content: '';
@@ -64,6 +61,10 @@ const HeroStyled = styled.div`
   @media all and (max-width: 800px) {
     min-height: calc(100vh - 50px);
     margin-bottom: 60px;
+
+    & h1 {
+      font-size: 48px;
+    }
   }
 `;
 
