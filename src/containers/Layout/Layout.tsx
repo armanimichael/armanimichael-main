@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
-import CookieConsent from 'react-cookie-consent';
 
 import HeroContent from './HeroContent';
 
@@ -49,17 +47,6 @@ const Layout: React.FC<Props> = ({
       {SEOComponent || <SEO />}
       <GlobalStyle />
       <BackToTop />
-      <CookieConsent
-        enableDeclineButton
-        location="bottom"
-        buttonText="Accept"
-        declineButtonText="Decline"
-        cookieName="gatsby-gdpr-google-analytics"
-        sameSite="strict"
-      >
-        This site uses cookies... {` `}
-        <Link to="/privacy/">Read more about privacy.</Link>
-      </CookieConsent>
       <header>
         <Navbar
           logoSrc={logoImg}

@@ -8,16 +8,6 @@ module.exports = {
     author: '',
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-gdpr-cookies`,
-      options: {
-        googleAnalytics: {
-          trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
-          anonymize: true,
-        },
-        environments: ['production', 'development'],
-      },
-    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
     {
@@ -51,7 +41,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-mike',
-        short_name: 'armani-michael-blog',
+        short_name: 'armani-michael',
         start_url: '/',
         background_color: '#0f0e17',
         theme_color: '#a7a9be',
