@@ -9,6 +9,7 @@ import BackToTop from './BackToTop/BackToTop';
 import SEO from './SEO/SEO';
 import Image from './Image/Image';
 import NotFoundImage from './NotFoundImage/NotFoundImage';
+import Project from './Project/Project';
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   SEO,
   Image,
   NotFoundImage,
+  Project,
 };

@@ -24,9 +24,9 @@ const lightTheme: DefaultTheme = {
   },
 
   card: {
-    background: '#fffffe',
-    paragraph: '#2d334a',
-    heading: '#272343',
+    background: '#272343',
+    paragraph: '#fffffe',
+    heading: '#ffd803',
   },
 
   heroHue: '90deg',

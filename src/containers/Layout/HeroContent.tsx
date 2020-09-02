@@ -15,10 +15,10 @@ const HeroContent: React.FC = () => (
         Check my blog out!
       </Button>
       <Button
-        anchorTo="/#portfolio"
+        anchorTo="/#projects"
         styles={{ color: 'black', background: '#fce205' }}
       >
-        Portfolio
+        Projects
       </Button>
     </ButtonGroup>
   </Hero>

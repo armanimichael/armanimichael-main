@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a, p, li, ul, ol, td, th {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6em;   
     color: ${props => props.theme.paragraph.primary};
   }
@@ -99,20 +99,40 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    background: ${props => props.theme.backgrounds.secondary};
+    background: none;
     box-sizing: border-box;
-    padding: 40px;
 
     & a, p, li {
       color: ${props => props.theme.paragraph.primary};
     }
 
     & h1, h2, h3, h4, h5, h6 {    
+      color: ${props => props.theme.headline.primary};
+    }
+  }
+  
+  div.primary-section {
+    padding: 80px 40px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  div.secondary-section {
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    background: ${props => props.theme.backgrounds.secondary};
+
+    & a, p, li {
+      color: ${props => props.theme.paragraph.secondary};
+    }
+
+    & h1, h2, h3, h4, h5, h6 {    
       color: ${props => props.theme.headline.secondary};
     }
-  }  
+  }
 
-  section.transparent {
+  div.transparent {
     background: transparent;
   }
 
@@ -179,18 +199,14 @@ const GlobalStyle = createGlobalStyle`
     width: 50%;
   }
 
-
-  .CookieConsent {
-    z-index: 10000 !important;
-    font-size: 18px;
-
-    & a {
-      color: #a7a9be;
-    }
-  }
-
   .hero-background {
     filter: hue-rotate(${props => props.theme.heroHue});
+  }
+
+  #about-me {
+    width: 50%;
+    margin: 0;
+    margin-top: 40px;
   }
 
   @media all and (max-width: 800px) {
@@ -204,7 +220,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 24px;
       margin: 20px 0;
     }
 
@@ -233,6 +249,14 @@ const GlobalStyle = createGlobalStyle`
 
     .blog-wrapper {
       width: 90%;
+    }
+
+    #about-me {
+      width: 100%;
+    }
+
+    div.primary-section, div.secondary-section {
+      padding: 60px 30px;;
     }
   }
 `;
