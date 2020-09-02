@@ -69,9 +69,7 @@ const SEO: React.FC<Props> = ({
         },
         {
           property: 'og:image',
-          content: image
-            ? image
-            : siteMetadata.siteUrl + '/default-social-image.png',
+          content: image ? image : siteMetadata.siteUrl + '/social_image.jpg',
         },
         {
           property: 'og:site_name',
