@@ -55,6 +55,7 @@ const Image = styled.div<ImageProps>`
       height: 100%;
       background: ${props => props.theme.card.background};
       opacity: 0.9;
+      border-radius: 24px;
     }
   }
 `;
