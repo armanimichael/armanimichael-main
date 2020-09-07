@@ -10,6 +10,7 @@ import SEO from './SEO/SEO';
 import Image from './Image/Image';
 import NotFoundImage from './NotFoundImage/NotFoundImage';
 import Project from './Project/Project';
+import Quote from './Quote/Quote';
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   Image,
   NotFoundImage,
   Project,
+  Quote,
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Project } from '../components';
+import { Project, Quote } from '../components';
 import { Layout, Socials, Section } from '../containers/';
 
 import gatsbyLogoImg from '../images/gatsby.png';
@@ -12,7 +12,6 @@ import logoImg from '../images/logo.png';
 const IndexPage: React.FC = () => (
   <Layout showHero allowPadding={false}>
     <Socials title="You can find me here" />
-
     <Section title="About Me..." isSecondary>
       <p id="about-me">
         Hello there! I&apos;m Michael, a <b>Software Developer</b> passionate
@@ -67,6 +66,12 @@ const IndexPage: React.FC = () => (
       <Project name="L'Essenza" image={lessenzaImg} link="https://lessenza.net">
         One of my first GatsbyJS Projects.
       </Project>
+    </Section>
+    <Section isSecondary>
+      <Quote author="H.P. Lovecraft">
+        I never ask a man what his business is, for it never interests me. What
+        I ask him about are his thoughts and dreams.
+      </Quote>
     </Section>
   </Layout>
 );
