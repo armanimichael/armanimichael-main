@@ -209,6 +209,29 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 40px;
   }
 
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  li {
+    position: relative;
+    margin-left: 1em;
+  }
+
+  li:before {
+    content: "</>";
+    padding-right: 10px;
+    font-weight: bold;
+    color: #2dff7a;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -2em;
+    font-size: 0.6em;
+  }
+
   @media all and (max-width: 800px) {
     h1 {
       font-size: 40px;

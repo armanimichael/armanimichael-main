@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Project, Quote } from '../components';
-import { Layout, Socials, Section } from '../containers/';
+import { Layout, Socials, Section, Competences } from '../containers/';
 
 import gatsbyLogoImg from '../images/gatsby.png';
 import pythonLogoImg from '../images/python.png';
@@ -73,6 +73,7 @@ const IndexPage: React.FC = () => (
         I ask him about are his thoughts and dreams.
       </Quote>
     </Section>
+    <Competences title="My Competences"></Competences>
   </Layout>
 );
 
