@@ -49,6 +49,11 @@ const FooterStyled = styled.footer`
       }
     }
   }
+
+  @supports (-ms-flow-from: edge) {
+    /* Edge only */
+    justify-content: space-around;
+  }
 `;
 
 const Logo = styled.div<LogoProps>`
