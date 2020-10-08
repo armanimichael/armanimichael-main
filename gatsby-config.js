@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-mike',
+        name: 'armani-michael',
         short_name: 'armani-michael',
         start_url: '/',
         background_color: '#0f0e17',
