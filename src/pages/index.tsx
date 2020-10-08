@@ -14,9 +14,10 @@ const IndexPage: React.FC = () => (
     <Socials title="You can find me here" />
     <Section title="About Me..." isSecondary>
       <p id="about-me">
-        Hello there! I&apos;m Michael, a <b>Software Developer</b> passionate
-        about
-        <b> Web Technologies</b>, Horror Literature, and Science. <br />
+        Hello there! I&apos;m Michael, a <b>Software Developer and student</b>{' '}
+        passionate about
+        <b> Web Technologies</b>, Horror Literature, and Science in general.{' '}
+        <br />
         <a
           href="https://blog.armanimichael.com"
           rel="nofollow noopener noreferrer"
@@ -24,7 +25,7 @@ const IndexPage: React.FC = () => (
         >
           I also run a <b>blog</b>, go check that out!
         </a>
-        <p>Welcome to my Website.</p>
+        <p>Welcome to my Website! 😃</p>
       </p>
     </Section>
     <Section title="Some Projects of Mine" id="projects">
