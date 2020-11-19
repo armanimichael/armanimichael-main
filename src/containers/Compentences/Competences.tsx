@@ -13,12 +13,11 @@ const Competences: React.FC<Props> = props => (
       <div>
         <h3>Programming languages</h3>
         <ul>
-          <li>C#</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
+          <li>JavaScript + TypeScript</li>
           <li>NodeJS</li>
-          <li>PHP</li>
           <li>Python</li>
+          <li>PHP</li>
+          <li>C#</li>
           <li>Relational DBs - MySQL</li>
         </ul>
       </div>
@@ -28,10 +27,10 @@ const Competences: React.FC<Props> = props => (
           <li>ReactJS</li>
           <li>GatsbyJS</li>
           <li>Pygame</li>
-          <li>NodeJS</li>
           <li>P5js</li>
           <li>Processing</li>
           <li>Electron</li>
+          <li>ExpressJS</li>
         </ul>
       </div>
     </ListsContainer>

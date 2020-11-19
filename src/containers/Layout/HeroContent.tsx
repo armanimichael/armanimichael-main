@@ -7,14 +7,14 @@ const HeroContent: React.FC = () => (
   <Hero>
     <h1>Hi, I&apos;m Michael.</h1>
     <h3 style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 'normal' }}>
-      Software Developer and Student @{' '}
+      Software Developer, <br />{' '}
       <a
         href="https://offertaformativa.unitn.it/it/l/interfacce-e-tecnologie-della-comunicazione"
         rel="norel noopener noreferrer"
         target="_blank"
         style={{ color: 'rgba(255, 255, 255, 0.85)' }}
       >
-        University of Trento
+        Student @ University of Trento
       </a>
     </h3>
     <ButtonGroup>

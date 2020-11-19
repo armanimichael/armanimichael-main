@@ -4,7 +4,7 @@ import { Project, Quote } from '../components';
 import { Layout, Socials, Section, Competences } from '../containers/';
 
 import gatsbyLogoImg from '../images/gatsby.png';
-import pythonLogoImg from '../images/python.png';
+import learnGoImg from '../images/go.png';
 import armaniEsteticaImg from '../images/armaniestetica.png';
 import lessenzaImg from '../images/lessenza.png';
 import logoImg from '../images/logo.png';
@@ -16,7 +16,7 @@ const IndexPage: React.FC = () => (
       <p id="about-me">
         Hello there! I&apos;m Michael, a <b>Software Developer and student</b>{' '}
         passionate about
-        <b> Web Technologies</b>, Horror Literature, and Science in general.{' '}
+        <b> Computer Science</b>, Horror Literature, and Science in general.{' '}
         <br />
         <a
           href="https://blog.armanimichael.com"
@@ -44,11 +44,12 @@ const IndexPage: React.FC = () => (
         A simple yet functional TypeScript GatsbyJS starter.
       </Project>
       <Project
-        name="Botzoz"
-        image={pythonLogoImg}
-        link="https://github.com/armanimichael/botzoz-discord-bot"
+        name="Learn Go"
+        image={learnGoImg}
+        link="https://github.com/armanimichael/learn-go"
       >
-        My Discord Bot, still WIP. I don&apos;t update this often.
+        A tutorial repository with some snippets to quickly explain some Go
+        language concepts.
       </Project>
       <Project
         name="This Website 😉"

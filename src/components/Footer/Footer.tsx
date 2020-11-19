@@ -42,7 +42,7 @@ const Footer: React.FC<Props> = ({ logoSrc, customTitle, logoBackground }) => {
           <h3>
             <IoMdInformationCircleOutline />
           </h3>
-          <Link to="/privacy">Sitemap</Link>
+          <Link to="/sitemap.xml">Sitemap</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <a
             href="https://armanimichael.com"
