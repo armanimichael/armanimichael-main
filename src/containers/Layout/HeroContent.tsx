@@ -9,12 +9,12 @@ const HeroContent: React.FC = () => (
     <h3 style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 'normal' }}>
       Software Developer, <br />{' '}
       <a
-        href="https://offertaformativa.unitn.it/it/l/interfacce-e-tecnologie-della-comunicazione"
+        href="https://www.tecnoprogress.net/"
         rel="norel noopener noreferrer"
         target="_blank"
         style={{ color: 'rgba(255, 255, 255, 0.85)' }}
       >
-        Student @ University of Trento
+        Web Developer
       </a>
     </h3>
     <ButtonGroup>

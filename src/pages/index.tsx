@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => (
     <Socials title="You can find me here" />
     <Section title="About Me..." isSecondary>
       <p id="about-me">
-        Hello there! I&apos;m Michael, a <b>Software Developer and student</b>{' '}
+        Hello there! I&apos;m Michael, a <b>Software Developer and</b>{' '}
         passionate about
         <b> Computer Science</b>, Horror Literature, and Science in general.{' '}
         <br />
