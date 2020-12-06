@@ -14,7 +14,7 @@ const HeroContent: React.FC = () => (
         target="_blank"
         style={{ color: 'rgba(255, 255, 255, 0.85)' }}
       >
-        Web Developer
+        Web Dev at Tecnoprogress
       </a>
     </h3>
     <ButtonGroup>
