@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 
 import { useNavbarlinks } from '../queries/useNavbarLinks';
 
@@ -22,7 +22,7 @@ export const generateLinks = (): any => {
         key={id}
         href={path}
         target="_blank"
-        rel="nofollow noopener noreferrer"
+        rel="external noopener noreferrer"
       >
         {name}
       </a>

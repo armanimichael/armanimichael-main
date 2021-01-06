@@ -148,5 +148,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/src/intl/`,
+        languages: [`en`, `it`],
+        defaultLanguage: `it`,
+        redirect: true,
+      },
+    },
   ],
 };

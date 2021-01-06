@@ -1,0 +1,28 @@
+{
+  "hi": "Hi, I'm Michael",
+  "my-job": "Web Dev at Tecnoprogress",
+  "blog-btn": "Check my blog out!",
+  "projects-simple": "Projects",
+  "aboutme": "About Me...",
+  "socials": "You can find me here",
+  "intro": "Hi, I'm Michael. A <b>Software Developer<b/>, enthusiastic about <b>Web Development<b/> and Computer Science in general. <br/ > I love to keep updated on the latest technologies in the software development field. Moreover, I'm an avid reader, with a passion for Horror Literature.",
+  "check-blog": "I also run a blog, go check that out!",
+  "my-blog": "Il mio Blog",
+  "this-website": "This Website ",
+  "blog": "My personal blog, I update it every once in a while.",
+  "gatsby-mike": "A simple yet functional TypeScript GatsbyJS starter.",
+  "learn-go": "A tutorial repository with some snippets to quickly explain some Go language concepts.",
+  "my-website": "My Website Github repository, feel free to take a look.",
+  "armaniestetica": "A Website built with my GatsbyJS starter.",
+  "lessenza": "One of my first GatsbyJS Projects.",
+  "projects": "Some Projects of Mine",
+  "competences": "My Competences",
+  "programming-languages": "Programming Languages",
+  "libs-frameworks": "Libs and Frameworks",
+  "relational-dbs": "Relational DBs - MySQL",
+  "404": {
+    "not-found": "Page Not Found",
+    "msg": "Ops! Seems like you're lost! <br /> Feel free to check some of the following pages out.",
+    "random": "Visit a random page"
+  }
+}

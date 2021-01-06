@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 
 import { IoIosPaper, IoMdInformationCircleOutline } from 'react-icons/io';
 
@@ -42,15 +42,17 @@ const Footer: React.FC<Props> = ({ logoSrc, customTitle, logoBackground }) => {
           <h3>
             <IoMdInformationCircleOutline />
           </h3>
-          <Link to="/sitemap.xml">Sitemap</Link>
-          <Link to="/privacy">Privacy Policy</Link>
           <a
-            href="https://armanimichael.com"
-            rel="nofollow noopener noreferrer"
+            href="/sitemap.xml"
             target="_blank"
+            rel="noopener noreferrer"
+            title="sitemap"
           >
-            Developed by Me
+            Sitemap
           </a>
+          {/* There is no analitics on this website */}
+          {/* <Link to="/privacy">Privacy Policy</Link> */}
+          <Link to="/">Developed by Me</Link>
         </div>
       </FooterStyled>
       <SocialsContainer>

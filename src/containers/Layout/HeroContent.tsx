@@ -1,11 +1,16 @@
 import React from 'react';
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
 import { Button } from '../../components';
 import { Hero, ButtonGroup } from '../';
 
-const HeroContent: React.FC = () => (
+interface Props {
+  intl: IntlShape;
+}
+
+const HeroContent: React.FC<Props> = ({ intl }) => (
   <Hero>
-    <h1>Hi, I&apos;m Michael.</h1>
+    <h1>{intl.formatMessage({ id: 'hi' })}</h1>
     <h3 style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 'normal' }}>
       Software Developer, <br />{' '}
       <a
@@ -14,7 +19,7 @@ const HeroContent: React.FC = () => (
         target="_blank"
         style={{ color: 'rgba(255, 255, 255, 0.85)' }}
       >
-        Web Dev at Tecnoprogress
+        {intl.formatMessage({ id: 'my-job' })}
       </a>
     </h3>
     <ButtonGroup>
@@ -22,16 +27,16 @@ const HeroContent: React.FC = () => (
         anchorTo="https://blog.armanimichael.com"
         styles={{ color: 'black', background: '#39ff14' }}
       >
-        Check my blog out!
+        {intl.formatMessage({ id: 'blog-btn' })}
       </Button>
       <Button
         anchorTo="/#projects"
         styles={{ color: 'black', background: '#fce205' }}
       >
-        Projects
+        {intl.formatMessage({ id: 'projects-simple' })}
       </Button>
     </ButtonGroup>
   </Hero>
 );
 
-export default HeroContent;
+export default injectIntl(HeroContent);

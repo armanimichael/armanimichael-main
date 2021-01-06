@@ -12,7 +12,7 @@ const Project: React.FC<Props> = ({ name, image, link, children }) => (
   <ProjectStyled
     href={link}
     target="_blank"
-    rel="nofollow noopener noreferrer"
+    rel="external noopener noreferrer"
     title={name}
   >
     <Image image={image} />

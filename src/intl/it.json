@@ -1,0 +1,28 @@
+{
+  "hi": "Ciao, sono Michael",
+  "my-job": "Web Dev a Tecnoprogress",
+  "blog-btn": "Visita il mio blog!",
+  "projects-simple": "Progetti",
+  "aboutme": "Chi Sono...",
+  "socials": "Puoi trovarmi qui",
+  "intro": "Ciao, sono Michael. <b>Software Developer</b> con la passione per lo <b>sviluppo Web<b/> e l'informatica in generale. <br /> Mi piace tenermi aggiornato sulle ultime novit&agrave; tecnologiche nel campo dello sviluppo software. Sono inoltre un lettore accanito, amante della letteratura Horror.",
+  "check-blog": "Ho anche un blog, vai a darci un'occhiata!",
+  "my-blog": "Il mio Blog",
+  "this-website": "Questo Sito ",
+  "blog": "Il mio blog, lo aggiorno una volta ogni tanto.",
+  "gatsby-mike": "Uno starter per GatsbyJS, con il supporto per TypeScript. Semplice ma funzionale.",
+  "learn-go": "Una repository, che funge da tutorial, per imparare i concetti base del linguaggio Go.",
+  "my-website": "La repository GitHub di questo sito, sentiti libero di andare a curiosare.",
+  "armaniestetica": "Un sito web sviluppato con il mio starter per GatsbyJS",
+  "lessenza": "Uno dei miei primi progetti con GatsbyJS",
+  "projects": "Alcuni miei progetti",
+  "competences": "Le Mie Competenze",
+  "programming-languages": "Linguaggi di Programmazione",
+  "libs-frameworks": "Librerie e Framework",
+  "relational-dbs": "Database Relazionali - MySQL",
+  "404": {
+    "not-found": "Pagina Non Trovata",
+    "msg": "Ops! Sembra che ti sia perso <br /> Visita una delle pagine seguenti.",
+    "random": "Visita una pagina random"
+  }
+}

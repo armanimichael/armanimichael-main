@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
 import { Project, Quote } from '../components';
 import { Layout, Socials, Section, Competences } from '../containers/';
@@ -9,64 +10,67 @@ import armaniEsteticaImg from '../images/armaniestetica.png';
 import lessenzaImg from '../images/lessenza.png';
 import logoImg from '../images/logo.png';
 
-const IndexPage: React.FC = () => (
+interface Props {
+  intl: IntlShape;
+}
+
+const IndexPage: React.FC<Props> = ({ intl }) => (
   <Layout showHero allowPadding={false}>
-    <Socials title="You can find me here" />
-    <Section title="About Me..." isSecondary>
+    <Socials title={intl.formatMessage({ id: 'socials' })} />
+    <Section title={intl.formatMessage({ id: 'aboutme' })} isSecondary>
       <p id="about-me">
-        Hello there! I&apos;m Michael, a <b>Software Developer and</b>{' '}
-        passionate about
-        <b> Computer Science</b>, Horror Literature, and Science in general.{' '}
-        <br />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: 'intro' }),
+          }}
+        />
         <a
           href="https://blog.armanimichael.com"
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
-          I also run a <b>blog</b>, go check that out!
+          {intl.formatMessage({ id: 'check-blog' })}
         </a>
-        <p>Welcome to my Website! 😃</p>
       </p>
     </Section>
-    <Section title="Some Projects of Mine" id="projects">
+    <Section title={intl.formatMessage({ id: 'projects' })} id="projects">
       <Project
-        name="My Blog"
+        name={intl.formatMessage({ id: 'my-blog' })}
         image={logoImg}
         link="https://blog.armanimichael.com"
       >
-        My personal blog, sometimes I write stuff.
+        {intl.formatMessage({ id: 'blog' })}
       </Project>
       <Project
         name="Gatsby-Starter-Mike"
         image={gatsbyLogoImg}
         link="https://github.com/armanimichael/gatsby-starter-mike"
       >
-        A simple yet functional TypeScript GatsbyJS starter.
+        {intl.formatMessage({ id: 'gatsby-mike' })}
       </Project>
       <Project
         name="Learn Go"
         image={learnGoImg}
         link="https://github.com/armanimichael/learn-go"
       >
-        A tutorial repository with some snippets to quickly explain some Go
-        language concepts.
+        {intl.formatMessage({ id: 'learn-go' })}
       </Project>
       <Project
-        name="This Website 😉"
+        name={`${intl.formatMessage({ id: 'this-website' })}😉`}
         image={logoImg}
         link="https://github.com/armanimichael/armanimichael-main"
       >
-        My Website&apos;s Github repository, feel free to take a look.
+        {intl.formatMessage({ id: 'my-website' })}
       </Project>
       <Project
         name="Armani Estetica"
         image={armaniEsteticaImg}
         link="https://armaniestetica.it"
       >
-        A Website built with my GatsbyJS starter.
+        {intl.formatMessage({ id: 'armaniestetica' })}
       </Project>
       <Project name="L'Essenza" image={lessenzaImg} link="https://lessenza.net">
-        One of my first GatsbyJS Projects.
+        {intl.formatMessage({ id: 'lessenza' })}
       </Project>
     </Section>
     <Section isSecondary>
@@ -75,8 +79,10 @@ const IndexPage: React.FC = () => (
         I ask him about are his thoughts and dreams.
       </Quote>
     </Section>
-    <Competences title="My Competences"></Competences>
+    <Competences
+      title={intl.formatMessage({ id: 'competences' })}
+    ></Competences>
   </Layout>
 );
 
-export default IndexPage;
+export default injectIntl(IndexPage);

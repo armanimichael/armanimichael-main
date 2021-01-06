@@ -1,4 +1,5 @@
 import React from 'react';
+import { injectIntl } from 'gatsby-plugin-intl';
 
 import { Section } from '../../containers/';
 import { ListsContainer } from './styles';
@@ -11,18 +12,18 @@ const Competences: React.FC<Props> = props => (
   <Section {...props}>
     <ListsContainer>
       <div>
-        <h3>Programming languages</h3>
+        <h3>{props.intl.formatMessage({ id: 'programming-languages' })}</h3>
         <ul>
           <li>JavaScript + TypeScript</li>
           <li>NodeJS</li>
           <li>Python</li>
           <li>PHP</li>
           <li>C#</li>
-          <li>Relational DBs - MySQL</li>
+          <li>{props.intl.formatMessage({ id: 'relational-dbs' })}</li>
         </ul>
       </div>
       <div>
-        <h3>Libs and Frameworks</h3>
+        <h3>{props.intl.formatMessage({ id: 'libs-frameworks' })}</h3>
         <ul>
           <li>ReactJS</li>
           <li>GatsbyJS</li>
@@ -37,4 +38,4 @@ const Competences: React.FC<Props> = props => (
   </Section>
 );
 
-export default Competences;
+export default injectIntl(Competences);
