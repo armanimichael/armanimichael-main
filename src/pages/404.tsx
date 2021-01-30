@@ -1,16 +1,17 @@
 import React from 'react';
+import { PageProps } from 'gatsby';
 import { useIntl } from 'gatsby-plugin-intl';
 
 import { Button, NotFoundImage } from '../components/';
 import { Layout } from '../containers/';
 import { useRandomPage } from '../queries/useRandomPage';
 
-const NotFoundPage: React.FC = () => {
+const NotFoundPage: React.FC<PageProps> = props => {
   const randomPage = useRandomPage();
   const intl = useIntl();
 
   return (
-    <Layout>
+    <Layout location={props.location.hostname}>
       <h1>{intl.formatMessage({ id: '404.not-found' })}</h1>
       <p>
         <div

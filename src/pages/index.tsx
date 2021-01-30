@@ -1,4 +1,5 @@
 import React from 'react';
+import { PageProps } from 'gatsby';
 import { injectIntl, IntlShape } from 'gatsby-plugin-intl';
 
 import { Project, Quote } from '../components';
@@ -10,12 +11,12 @@ import armaniEsteticaImg from '../images/armaniestetica.png';
 import lessenzaImg from '../images/lessenza.png';
 import logoImg from '../images/logo.png';
 
-interface Props {
+interface Props extends PageProps {
   intl: IntlShape;
 }
 
-const IndexPage: React.FC<Props> = ({ intl }) => (
-  <Layout showHero allowPadding={false}>
+const IndexPage: React.FC<Props> = ({ intl, location }) => (
+  <Layout showHero allowPadding={false} location={location.hostname}>
     <Socials title={intl.formatMessage({ id: 'socials' })} />
     <Section title={intl.formatMessage({ id: 'aboutme' })} isSecondary>
       <p id="about-me">

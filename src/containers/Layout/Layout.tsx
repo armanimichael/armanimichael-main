@@ -18,6 +18,7 @@ interface Props {
   noScriptMsg?: string;
   SEOComponent?: React.ReactElement;
   allowPadding?: boolean;
+  location: string;
 }
 
 const Layout: React.FC<Props> = ({
@@ -46,7 +47,7 @@ const Layout: React.FC<Props> = ({
     <ThemeProvider theme={isDarkMode ? themes.dark : themes.light}>
       {SEOComponent || <SEO />}
       <GlobalStyle />
-      <BackToTop />
+      <BackToTop location={location.pathname} />
       <header>
         <Navbar
           logoSrc={logoImg}
