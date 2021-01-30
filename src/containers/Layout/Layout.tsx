@@ -47,7 +47,9 @@ const Layout: React.FC<Props> = ({
     <ThemeProvider theme={isDarkMode ? themes.dark : themes.light}>
       {SEOComponent || <SEO />}
       <GlobalStyle />
-      <BackToTop location={location.pathname} />
+      <BackToTop
+        location={typeof location != 'undefined' ? location.pathname : ''}
+      />
       <header>
         <Navbar
           logoSrc={logoImg}
