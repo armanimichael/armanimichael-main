@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import LanguageButton from './LanguageButton';
+
 import {
   NavbarWrappedStyled,
   ContentWrapped,
@@ -39,6 +41,7 @@ const NavbarWrapped: React.FC<Props> = props => {
       <ContentWrapped isClicked={isOpen} isHidden={props.isHidden}>
         {props.themeButton}
         {links}
+        <LanguageButton />
       </ContentWrapped>
     </NavbarWrappedStyled>
   );

@@ -3,8 +3,14 @@ import React from 'react';
 import { BackToTopStyled } from './styles';
 import { IoIosArrowUp } from 'react-icons/io';
 
-const BackToTop: React.FC = () => (
-  <BackToTopStyled to="#top" title="Back to Top">
+interface Props {
+  location: string;
+}
+const BackToTop: React.FC<Props> = ({ location }) => (
+  <BackToTopStyled
+    to={location.replace(/\/en\/|\/it\//, '/')}
+    title="Back to Top"
+  >
     <IoIosArrowUp />
   </BackToTopStyled>
 );

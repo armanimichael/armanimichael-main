@@ -26,9 +26,14 @@ interface LogoProps {
   marginLeft?: number;
 }
 
+interface LanguageButtonProps {
+  flag: string;
+}
+
 // * Styles
 const NavbarStyled = styled.div`
   position: relative;
+  z-index: 1000;
   width: 100%;
   height: 80px;
   overflow-x: hidden;
@@ -137,6 +142,14 @@ const NavbarWrappedStyled = styled(Navbar)<NavbarProps>`
   /* Overloads Overflow checks if under max-width */
   @media screen and (max-width: 800px) {
     z-index: 200;
+
+    & #language-button {
+      position: relative;
+      margin: 1.4em 2em 0 2em;
+      right: unset;
+      font-size: 24px;
+      background-position: left center;
+    }
   }
 `;
 
@@ -253,6 +266,20 @@ const DisableBodyScroll = createGlobalStyle<DisableBodyScrollProps>`
   }
 `;
 
+const LanguageButtonStyled = styled.button<LanguageButtonProps>`
+  position: absolute;
+  width: 50px;
+  right: 40px;
+  background: none;
+  border: none;
+  height: 26px;
+  background-image: url(${props => props.flag});
+  background-position: right center;
+  background-repeat: no-repeat;
+  outline: none;
+  cursor: pointer;
+`;
+
 export {
   NavbarStyled,
   NavbarExtended,
@@ -264,4 +291,5 @@ export {
   ContentWrapped,
   DisableBodyScroll,
   Logo,
+  LanguageButtonStyled,
 };

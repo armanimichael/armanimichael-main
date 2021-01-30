@@ -5,6 +5,7 @@ import { NavbarStyled, NavbarExtended, Logo } from './styles';
 import { generateLinks } from '../../utils/generateLinks';
 import NavbarWrapped from './NavbarWrapped';
 import ThemeButton from './ThemeButton';
+import LanguageButton from './LanguageButton';
 
 interface NavbarProps {
   logoSrc?: string;
@@ -64,7 +65,6 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <NavbarStyled>
-      <div id="top" />
       <NavbarExtended isHidden={isWrapped} id="navbar-extended">
         <Logo
           isWrapped={false}
@@ -75,6 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({
         />
         {generateLinks()}
         {themeButton}
+        <LanguageButton />
       </NavbarExtended>
 
       <NavbarWrapped
