@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 
 const BackToTopStyled = styled(Link)`
   position: fixed;
