@@ -4,6 +4,7 @@ import { NavbarStyled, NavbarExtended, Logo } from './styles';
 
 import { generateLinks } from '../../utils/generateLinks';
 import NavbarWrapped from './NavbarWrapped';
+import ThemeButton from './ThemeButton';
 
 interface NavbarProps {
   logoSrc?: string;
@@ -57,14 +58,8 @@ const Navbar: React.FC<NavbarProps> = ({
     }
   };
 
-  const themeButton = isDarkMode ? (
-    <span role="img" aria-label="light-mode" onClick={changeTheme}>
-      ☀️
-    </span>
-  ) : (
-    <span role="img" aria-label="dark-mode" onClick={changeTheme}>
-      🌙
-    </span>
+  const themeButton = (
+    <ThemeButton changeTheme={changeTheme} isDarkMode={isDarkMode} />
   );
 
   return (
