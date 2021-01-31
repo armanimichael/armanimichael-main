@@ -12,6 +12,11 @@ const StyledBackground = styled(HeroBackground)`
   @media all and (max-width: 800px) {
     min-height: calc(100vh - 50px);
   }
+
+  @media all and (max-height: 480px) {
+    min-height: unset;
+    height: calc(100vh + 50px);
+  }
 `;
 
 const HeroStyled = styled.div`
@@ -33,7 +38,7 @@ const HeroStyled = styled.div`
     z-index: 2;
   }
 
-  & h3 {
+  & h2 {
     margin-top: 0;
     margin-bottom: 1.4em;
     color: white;
