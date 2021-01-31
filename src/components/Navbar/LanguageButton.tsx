@@ -17,7 +17,7 @@ const LanguageButton: React.FC = () => {
       className="language-button"
       flag={currentFlag}
       aria-label={`language-${intl.locale}`}
-      title={intl.locale}
+      title={nextLanguage}
       onClick={() => changeLocale(nextLanguage)}
     />
   );
