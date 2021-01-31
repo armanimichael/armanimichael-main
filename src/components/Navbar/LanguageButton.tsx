@@ -9,13 +9,15 @@ import gbFlag from '../../images/gb.svg';
 const LanguageButton: React.FC = () => {
   const intl = useIntl();
 
-  const currentFlag = intl.locale === 'it' ? itFlag : gbFlag;
+  const currentFlag = intl.locale === 'it' ? gbFlag : itFlag;
   const nextLanguage = intl.locale === 'it' ? 'en' : 'it';
 
   return (
     <LanguageButtonStyled
       id="language-button"
       flag={currentFlag}
+      aria-label={`language-${intl.locale}`}
+      title={intl.locale}
       onClick={() => changeLocale(nextLanguage)}
     />
   );
