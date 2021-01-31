@@ -143,7 +143,7 @@ const NavbarWrappedStyled = styled(Navbar)<NavbarProps>`
   @media screen and (max-width: 800px) {
     z-index: 200;
 
-    & #language-button {
+    & .language-button {
       position: relative;
       margin: 1.4em 2em 0 2em;
       right: unset;

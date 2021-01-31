@@ -11,7 +11,7 @@ interface Props {
 const HeroContent: React.FC<Props> = ({ intl }) => (
   <Hero>
     <h1>{intl.formatMessage({ id: 'hi' })}</h1>
-    <h3 style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 'normal' }}>
+    <h2 style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 'normal' }}>
       Software Developer, <br />{' '}
       <a
         href="https://www.tecnoprogress.net/"
@@ -21,7 +21,7 @@ const HeroContent: React.FC<Props> = ({ intl }) => (
       >
         {intl.formatMessage({ id: 'my-job' })}
       </a>
-    </h3>
+    </h2>
     <ButtonGroup>
       <Button
         anchorTo="https://blog.armanimichael.com"

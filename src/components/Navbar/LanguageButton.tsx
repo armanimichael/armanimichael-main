@@ -14,7 +14,7 @@ const LanguageButton: React.FC = () => {
 
   return (
     <LanguageButtonStyled
-      id="language-button"
+      className="language-button"
       flag={currentFlag}
       aria-label={`language-${intl.locale}`}
       title={intl.locale}
